@@ -24,6 +24,17 @@
           </div>
         </div>
         <div class="header-avator-con">
+          <a @click="getc = true">捐助</a>
+          <Modal
+            v-model="getc"
+            title="捐助Yearning"
+            width="640">
+            <h3>让Yearning持续提供更好的功能与服务。</h3>
+            <br>
+            <img height="300" width="300" src="./assets/alipay.jpg"/>
+            <img height="300" width="300" src="./assets/wechat.jpg"/>
+          </Modal>
+          <a href="https://cookiey.github.io/Yearning-document/used/" target="_Blank">使用说明</a>
           <div @click="handleFullScreen" v-if="showFullScreenBtn" class="full-screen-btn-con">
             <Tooltip :content="isFullScreen ? '退出全屏' : '全屏'" placement="bottom">
               <Icon :type="isFullScreen ? 'md-contract' : 'md-expand'" :size="23"></Icon>
@@ -100,6 +111,7 @@
       <br>
       <p>由Yearning平台所产生的一切后果,Yearning作者本人不负一切责任! 请在进行安全评估及测试体验后使用。</p>
       <br>
+      <h3>当然用的喜欢,就打赏下我吧 ^_^ 左上角点击捐助</h3>
       <br>
       <p>此声明不会对非超级管理员用户推送。当接受上述条款并点击同意后,此通知将不会再次出现在超级管理员页面中。</p>
     </Modal>
